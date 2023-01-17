@@ -3,34 +3,17 @@
  */
 public class Fibonacchi {
 
-  /**
-   * Calculates the Fibonacchi Sequence to a certain position, starting with 0 and 1.
-   * @param timeToLive
-   * @param n1
-   * @param n2
-   * @return
-   */
-  public static int fibonacchi(int timeToLive, int n1, int n2) {
-    if (timeToLive > 0) {
-      return fibonacchi(timeToLive - 1, n2, n1 + n2);
+  public static int fibonacchi(int sequenceNum, int n1, int n2) {
+    if (sequenceNum > 0) {
+      return fibonacchi(sequenceNum - 1, n2, n1 + n2);
     }
     return n1;
   }
 
-  /**
-   * Calculates the Fibonacchi Sequence to a certain position, starting with 0 and 1.
-   * @author Lucas Brunner 
-   * @param sequenceNum The position in the sequence which will be returned. The initial 0 and 1 are the 0th and 1st numbers.
-   * @return
-   */
   public static int fibonacchi(int sequenceNum) {
     return fibonacchi(sequenceNum, 0, 1);
   }
 
-  /**
-   * Returns an Integer as a string with the correct ordinal indicator appended.
-   * @author Lucas Brunner 
-   */
   public static String ordinalIndicated(Integer number) {
     String numberString = number.toString();
 
